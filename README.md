@@ -1,22 +1,34 @@
-A library for Dart developers.
+# set_value
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+> Create nested values and any intermediaries using dot notation (`'a.b.c'`) paths.
+
+This is a `Dart` copy of the `js` project [set-value](https://www.npmjs.com/package/set-value) by [Jon Schlinkert](https://github.com/jonschlinkert).
+Please consider following either (or both) projects and starring the projects to show your :heart: and support.
+Also, feel free to make pull requests, open issues, or just let me know if I've messed up. The goal is to keep this project in-line with the original as far as possible.
+Lastly, please consider following the project author [Ferdinand Steenkamp](https://github.com/Ferdzzzzzzzz/).
+
+## Install
 
 ## Usage
 
-A simple usage example:
+### About
 
-```dart
-import 'package:set_value/set_value.dart';
+Pull requests and issues always welcome. There is a lot more information on this project at the original [set-value](https://www.npmjs.com/package/set-value). 
 
-main() {
-  var awesome = new Awesome();
-}
-```
+### Author
 
-## Features and bugs
+**Ferdinand Steenkamp**
 
-Please file feature requests and bugs at the [issue tracker][tracker].
+* [GitHub Profile](https://github.com/Ferdzzzzzzzz)
+* [Twitter Profile](https://twitter.com/therealferdz)
+* [LinkedIn Profile](https://www.linkedin.com/in/ferdinand-steenkamp-552335181/)
 
-[tracker]: http://example.com/issues/replaceme
+
+
+### License
+
+Copyright © 2019, [Ferdinand Steenkamp](https://github.com/Ferdzzzzzzzz).
+Released under the [MIT License](LICENSE).
+
+
+
