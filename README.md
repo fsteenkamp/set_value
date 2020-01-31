@@ -1,6 +1,6 @@
 # set_value
 
-> Create nested values and any intermediaries using dot notation (`'a.b.c'`) paths.
+> Create nested values and any intermediaries using a List of keys: `['a','b',c']`.
 
 This is a `Dart` copy of the `js` project [set-value](https://www.npmjs.com/package/set-value) by [Jon Schlinkert](https://github.com/jonschlinkert).
 Please consider following either (or both) projects and starring the projects to show your :heart: and support.
