@@ -1,6 +1,6 @@
 # set_value
 
-> Create nested values and any intermediaries using a List of keys: `['a','b',c']`.
+> Create nested values and any intermediaries using list notation: `['a','b',c']`.
 
 This is a `Dart` copy of the `js` project [set-value](https://www.npmjs.com/package/set-value) by [Jon Schlinkert](https://github.com/jonschlinkert).
 Please consider following either (or both) projects and starring the projects to show your :heart: and support.
@@ -9,7 +9,46 @@ Lastly, please consider following the project author [Ferdinand Steenkamp](https
 
 ## Install
 
+Install with [pub.dev](https://pub.dev/), add this to your `pubspec.yaml`:
+
+        dependencies:
+            set_value:
+Then run `flutter pub get`.
+
 ## Usage
+
+Import the package:
+    
+    import 'package:set_value/set_value.dart';
+
+Using `dot` notation:
+    
+    void main() {
+        
+        var mock = <String, dynamic>{}
+        var setValue = SetValue();
+        
+        // set a value in a map
+        mock = setValue.setDot(mock, 'a.b.c', 'Value');
+        
+        // unset value in a map
+        mock = setValue.unsetDot(mock, 'a.b.c');
+    }
+
+
+Using `List<String>` method:
+    
+    void main() {
+        
+        var mock = <String, dynamic>{}
+        var setValue = SetValue();
+        
+        // set a value in a map
+        mock = setValue.set(mock, ['a', 'b', 'c'], 'Value');
+        
+        // unset value in a map
+        mock = setValue.unset(mock, ['a', 'b', 'c']);
+    }
 
 ### About
 
