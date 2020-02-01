@@ -5,10 +5,10 @@
 This is a `Dart` copy of the `js` project [set-value](https://www.npmjs.com/package/set-value) by [Jon Schlinkert](https://github.com/jonschlinkert).
 Please consider following either (or both) projects and starring the projects to show your :heart: and support.
 Also, feel free to make pull requests, open issues, or just let me know if I've messed up. The goal is to keep this project in-line with the original as far as possible.
-Lastly, please consider following the project author [Ferdinand Steenkamp](https://github.com/Ferdzzzzzzzz/).
+Lastly, please consider following the project author [Ferdin``and Steenkamp](https://github.com/Ferdzzzzzzzz/).
+
 
 ## Install
-
 Install with [pub.dev](https://pub.dev/), add this to your `pubspec.yaml`:
 
     dependencies:
