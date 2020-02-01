@@ -11,8 +11,8 @@ Lastly, please consider following the project author [Ferdinand Steenkamp](https
 
 Install with [pub.dev](https://pub.dev/), add this to your `pubspec.yaml`:
 
-        dependencies:
-            set_value:
+    dependencies:
+        set_value:
 Then run `flutter pub get`.
 
 ## Usage
