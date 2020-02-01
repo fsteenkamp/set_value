@@ -1,6 +1,6 @@
 # set_value
 
-> Create nested values and any intermediaries using list notation: `['a','b',c']` OR dot notation `"a.b.c"`.
+> Create nested values and any intermediaries using list notation `['a','b',c']` OR dot notation `"a.b.c"`.
 
 This is a `Dart` copy of the `js` project [set-value](https://www.npmjs.com/package/set-value) by [Jon Schlinkert](https://github.com/jonschlinkert).
 Please consider following either (or both) projects and starring the projects to show your :heart: and support.
@@ -58,6 +58,7 @@ Pull requests and issues always welcome. There is a lot more information on this
 
 **Ferdinand Steenkamp**
 
+* [Website](https://ferdzz.com)
 * [GitHub Profile](https://github.com/Ferdzzzzzzzz)
 * [Twitter Profile](https://twitter.com/therealferdz)
 * [LinkedIn Profile](https://www.linkedin.com/in/ferdinand-steenkamp-552335181/)
@@ -66,8 +67,8 @@ Pull requests and issues always welcome. There is a lot more information on this
 
 ### License
 
-Copyright © 2019, [Ferdinand Steenkamp](https://github.com/Ferdzzzzzzzz).
-Released under the [MIT License](LICENSE).
+Copyright © 2012, [Ferdinand Steenkamp](https://github.com/Ferdzzzzzzzz).
+Released under the [BSD License](LICENSE).
 
 
 

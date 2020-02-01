@@ -1,6 +1,17 @@
 class SetValue {
   SetValue();
 
+  ///
+  /// set
+  ///
+  /// Takes a json object, path and value,
+  /// returns the object with that value set
+  /// at the path
+  ///
+  /// @Map<String,dynamic> target
+  /// @List<String> path
+  /// @dynamic value
+  ///
   Map<String, dynamic> set(
     Map<String, dynamic> target,
     List<String> path,
@@ -36,10 +47,18 @@ class SetValue {
     return orig;
   }
 
+  ///
+  /// unset
+  ///
+  /// Takes a json object and unsets a key
+  ///
+  /// @Map<String,dynamic> target
+  /// @String path (Map key)
+  ///
   Map<String, dynamic> unset(
-      Map<String, dynamic> target,
-      List<String> path,
-      ) {
+    Map<String, dynamic> target,
+    List<String> path,
+  ) {
     if (!(path is List<String>)) {
       return target;
     }
@@ -54,10 +73,6 @@ class SetValue {
 
     for (var i = 0; i < len; i++) {
       var prop = path[i];
-
-//      if (!(target[prop] is Map<String, dynamic>)) {
-//        target[prop] = <String, dynamic>{};
-//      }
 
       if (!(target.containsKey(prop))) {
         break;
@@ -74,6 +89,14 @@ class SetValue {
     return orig;
   }
 
+  ///
+  /// _result
+  /// Add a value to the Map key
+  ///
+  /// @Map<String,dynamic> target
+  /// @String path (Map key)
+  /// @dynamic value
+  ///
   void _result(
     Map<String, dynamic> target,
     String path,
@@ -81,5 +104,4 @@ class SetValue {
   ) {
     target[path] = value;
   }
-
 }
