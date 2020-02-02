@@ -90,6 +90,41 @@ class SetValue {
   }
 
   ///
+  /// setDot
+  /// Add a value to the Map key using dot-notation
+  ///
+  /// @Map<String,dynamic> target
+  /// @String path (Map key)
+  /// @dynamic value
+  ///
+  Map<String, dynamic> setDot(
+    Map<String, dynamic> target,
+    String path,
+    dynamic value, {
+    String splitAt = '.',
+    String escapeWith = '\\',
+  }) {
+    return set(target, _split(path, splitAt, escapeWith), value);
+  }
+
+  ///
+  /// _result
+  /// Add a value to the Map key
+  ///
+  /// @Map<String,dynamic> target
+  /// @String path (Map key)
+  /// @dynamic value
+  ///
+  Map<String, dynamic> unsetDot(
+    Map<String, dynamic> target,
+    String path, {
+    String splitAt = '.',
+    String escapeWith = '\\',
+  }) {
+    return unset(target, _split(path, splitAt, escapeWith));
+  }
+
+  ///
   /// _result
   /// Add a value to the Map key
   ///
@@ -103,5 +138,35 @@ class SetValue {
     dynamic value,
   ) {
     target[path] = value;
+  }
+
+  ///
+  /// _result
+  /// Add a value to the Map key
+  ///
+  /// @Map<String,dynamic> target
+  /// @String path (Map key)
+  /// @dynamic value
+  ///
+
+  List<String> _split(String path, String splitAt, String escapeWith) {
+    var keys = path.split(splitAt);
+
+    var res = <String>[];
+    String prop;
+
+    for (var i = 0; i < keys.length; i++) {
+      prop = keys[i];
+      var lastChar = prop.length - 1;
+      print(prop.substring(lastChar));
+      while (prop.substring(lastChar) == escapeWith) {
+        print('getting here');
+        prop = prop.substring(0, lastChar) + splitAt + keys[++i];
+      }
+      res.add(prop);
+    }
+
+    print(res);
+    return res;
   }
 }

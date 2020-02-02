@@ -15,15 +15,19 @@ void main() {
   * two of which are nested.
   * */
 
-  mock = setValue.set(mock, ['Key 4'], 'Val 4');
-  mock = setValue.set(mock, ['Key 5', 'Key 5.1'], 'Val 5.1');
-  mock = setValue.set(mock, ['Key 5', 'Key 5.2'], 'Val 5.2');
+  //mock = setValue.setDot(mock, ['Key 4'], 'Val 4');
+  //mock = setValue.setDot(mock, ['Key 5', 'Key 5.1'], 'Val 5.1');
+  mock = setValue.setDot(
+      mock,
+      'Key 5.Key 5\\.2.Key 5\\.3.Key6.Key7.Key8\\.9\\.7\\.5.Key_last&.LastKey',
+      'Val 5.2',
+      escapeWith: '&');
 
   /*
   * Below we remove Key 2 and it's value from the map
   * */
 
-  mock = setValue.unset(mock, ['Key 2']);
+  //mock = setValue.unsetDot(mock, ['Key 2']);
 
   /*
   * Here we expect an output of:
@@ -40,5 +44,5 @@ void main() {
   * }
   * */
 
-  print(prettyJson(mock));
+  //print(prettyJson(mock));
 }
