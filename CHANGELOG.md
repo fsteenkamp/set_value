@@ -1,3 +1,11 @@
+## 1.0.2
+
+- Added more optional params
+- Fixed small bugs
+- Added dot notation
+- Added tests
+- Document fixes
+
 ## 1.0.1
 
 - Document fix

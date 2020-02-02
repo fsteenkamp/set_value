@@ -21,7 +21,7 @@ Import the package:
     
     import 'package:set_value/set_value.dart';
 
-Using `dot` notation:
+### Using `dot` notation:
     
     void main() {
         
@@ -29,14 +29,19 @@ Using `dot` notation:
         var setValue = SetValue();
         
         // set a value in a map
-        mock = setValue.setDot(mock, 'a.b.c', 'Value');
+        mock = setValue.setDot(mock, 'a.b.c', 'Value', splitAt = '.', escapeWith = '\\');
         
         // unset value in a map
         mock = setValue.unsetDot(mock, 'a.b.c');
     }
 
+Notes:
 
-Using `List<String>` method:
+*Escaping:* You can escape a split character using \\\\, alternatively, you can add your own escape character using the optional `escapeWith` option.
+
+*Dot Notation:* The dot notation oviously uses...dots. Alternatively, you can add your own dot character using the optional `splitAt` option.
+
+### Using `List<String>` method:
     
     void main() {
         
@@ -49,6 +54,8 @@ Using `List<String>` method:
         // unset value in a map
         mock = setValue.unset(mock, ['a', 'b', 'c']);
     }
+
+
 
 ### About
 
