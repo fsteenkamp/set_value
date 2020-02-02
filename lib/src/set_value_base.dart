@@ -161,6 +161,7 @@ class SetValue {
       var lastChar = prop.length - 1;
       while (prop.substring(lastChar) == escapeWith) {
         prop = prop.substring(0, lastChar) + splitAt + keys[++i];
+        lastChar = prop.length - 1;
       }
       res.add(prop);
     }
