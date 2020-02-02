@@ -108,12 +108,13 @@ class SetValue {
   }
 
   ///
-  /// _result
-  /// Add a value to the Map key
+  /// unsetDot
+  /// Remove a key from the map using dot-notation
   ///
   /// @Map<String,dynamic> target
   /// @String path (Map key)
-  /// @dynamic value
+  /// @optional String splitAt
+  /// @optional String escapeWith
   ///
   Map<String, dynamic> unsetDot(
     Map<String, dynamic> target,
@@ -141,12 +142,12 @@ class SetValue {
   }
 
   ///
-  /// _result
-  /// Add a value to the Map key
+  /// _split
+  /// Split an String with dot-notation
   ///
   /// @Map<String,dynamic> target
-  /// @String path (Map key)
-  /// @dynamic value
+  /// @String splitAt
+  /// @String escapeWith
   ///
 
   List<String> _split(String path, String splitAt, String escapeWith) {
@@ -158,15 +159,11 @@ class SetValue {
     for (var i = 0; i < keys.length; i++) {
       prop = keys[i];
       var lastChar = prop.length - 1;
-      print(prop.substring(lastChar));
       while (prop.substring(lastChar) == escapeWith) {
-        print('getting here');
         prop = prop.substring(0, lastChar) + splitAt + keys[++i];
       }
       res.add(prop);
     }
-
-    print(res);
     return res;
   }
 }
