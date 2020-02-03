@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Fixed docs
+
 ## 1.0.3
 
 - Added get and getDot functions

@@ -1,6 +1,6 @@
 name: set_value
 description: Create nested values and any intermediaries using list notation ['a','b',c'] OR dot notation "a.b.c".
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/Ferdzzzzzzzz/set_value
 
 environment:
