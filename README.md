@@ -35,7 +35,7 @@ Import the package:
         mock = setValue.unsetDot(mock, 'a.b.c');
         
         //get value in a map, returns null if it doesn't exists
-        print(setValue.get(mock, 'a.b.c'));
+        print(setValue.getDot(mock, 'a.b.c'));
     }
 
 Notes:
