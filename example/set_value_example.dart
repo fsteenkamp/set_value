@@ -84,4 +84,7 @@ void main() {
   * */
 
   print(prettyJson(mock));
+
+  print(setValue.get(mock, ['Key 5','Key 5.1']));
+  print(setValue.getDot(mock, 'Key 5.Key 5\\.1'));
 }

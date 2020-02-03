@@ -1,5 +1,9 @@
 ## 1.0.2
 
+- Added get and getDot functions
+
+## 1.0.2
+
 - Added more optional params
 - Fixed small bugs
 - Added dot notation

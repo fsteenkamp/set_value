@@ -33,6 +33,9 @@ Import the package:
         
         // unset value in a map
         mock = setValue.unsetDot(mock, 'a.b.c');
+        
+        //get value in a map, returns null if it doesn't exists
+        print(setValue.get(mock, 'a.b.c'));
     }
 
 Notes:
@@ -53,6 +56,9 @@ Notes:
         
         // unset value in a map
         mock = setValue.unset(mock, ['a', 'b', 'c']);
+        
+        //get value in a map, returns null if it doesn't exists
+        print(setValue.get(mock, ['a','b','c']));
     }
 
 
@@ -74,7 +80,7 @@ Pull requests and issues always welcome. There is a lot more information on this
 
 ### License
 
-Copyright © 2012, [Ferdinand Steenkamp](https://github.com/Ferdzzzzzzzz).
+Copyright © 2020, [Ferdinand Steenkamp](https://github.com/Ferdzzzzzzzz).
 Released under the [BSD License](LICENSE).
 
 

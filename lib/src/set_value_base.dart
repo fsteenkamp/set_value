@@ -90,6 +90,47 @@ class SetValue {
   }
 
   ///
+  /// get
+  ///
+  /// Takes a json object and path and returns the value at that path
+  ///
+  /// @Map<String,dynamic> target
+  /// @String path (Map key)
+  ///
+  ///
+  dynamic get(
+    Map<String, dynamic> target,
+    List<String> path,
+  ) {
+    if (!(path is List<String>)) {
+      return target;
+    }
+
+    if (path.length == 1) {
+      return target[path[0]];
+    }
+
+    var orig = target;
+    var len = path.length;
+
+    for (var i = 0; i < len; i++) {
+      var prop = path[i];
+
+      if (!(target.containsKey(prop))) {
+        break;
+      }
+
+      if (i == len - 1) {
+        return target[path[i]];
+        break;
+      }
+
+      target = target[prop];
+    }
+    return null;
+  }
+
+  ///
   /// setDot
   /// Add a value to the Map key using dot-notation
   ///
@@ -123,6 +164,25 @@ class SetValue {
     String escapeWith = '\\',
   }) {
     return unset(target, _split(path, splitAt, escapeWith));
+  }
+
+
+  ///
+  /// getDot
+  /// Get a value at any path using dot-notation
+  ///
+  /// @Map<String,dynamic> target
+  /// @String path (Map key)
+  /// @optional String splitAt
+  /// @optional String escapeWith
+  ///
+  dynamic getDot(
+      Map<String, dynamic> target,
+      String path, {
+        String splitAt = '.',
+        String escapeWith = '\\',
+      }) {
+    return get(target, _split(path, splitAt, escapeWith));
   }
 
   ///
